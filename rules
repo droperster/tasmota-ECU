@@ -1,0 +1,15 @@
+15:07:49.052 MQT: stat/tasmota_FAB3EC/RESULT = {"Rule1":{"State":"ON","Once":"OFF","StopOnError":"OFF","Length":828,"Free":145,"Rules":"ON System#Boot DO RuleTimer5 7  ENDON  on system#boot do RuleTimer4 10 ENDON  on system#boot do backlog mem2 10800; mem3 28800 ENDON    on Power1#state=1 do backlog Power3 1; RuleTimer2 mem2; RuleTimer3 0; Power2 0 endon       on Power2#state=1 do backlog Power3 0; Delay 5; RuleTimer2 0; RuleTimer3 0; mem4=0; mem5=0; Power1 0 endon       on Rules#Timer=2 do backlog Power3 0; Delay 5; RuleTimer2 0;    RuleTimer3 mem3; Power1 0 endon       on Rules#Timer=3 do backlog Power3 1; Delay 5; RuleTimer2 mem2; RuleTimer3 0 endon    on Rules#Timer=4 DO IF (%power3%==1) Delay 5; mem1=mem1+1; Mem6=mem1; RuleTimer4 60 ELSE Delay 5; RuleTimer4 60 ENDIF  ENDON ON Rules#Timer=5 do backlog IF (%mem5%>0) RuleTimer3 mem5 ENDIF; IF (%mem4%>0) RuleTimer2 mem4 ENDIF  ENDON on Power3#state=1 do Mem8 1 ENDON on Power3#state=0 do Mem8 0 ENDON"}}
+
+Rule1
+ON System#Boot DO RuleTimer5 7  ENDON  
+on system#boot do RuleTimer4 10 ENDON  
+on system#boot do backlog mem2 10800; mem3 28800 ENDON    
+on Power1#state=1 do backlog Power3 1; RuleTimer2 mem2; RuleTimer3 0; Power2 0 endon       
+on Power2#state=1 do backlog Power3 0; Delay 5; RuleTimer2 0; RuleTimer3 0; mem4=0; mem5=0; Power1 0 endon       
+on Rules#Timer=2 do backlog Power3 0; Delay 5; RuleTimer2 0;    RuleTimer3 mem3; Power1 0 endon       
+on Rules#Timer=3 do backlog Power3 1; Delay 5; RuleTimer2 mem2; RuleTimer3 0 endon    
+on Rules#Timer=4 DO IF (%power3%==1) Delay 5; mem1=mem1+1; Mem6=mem1; RuleTimer4 60 ELSE Delay 5; RuleTimer4 60 ENDIF  ENDON 
+ON Rules#Timer=5 do backlog IF (%mem5%>0) RuleTimer3 mem5 ENDIF; IF (%mem4%>0) RuleTimer2 mem4 ENDIF  ENDON 
+on Power3#state=1 do Mem8 1 ENDON 
+on Power3#state=0 do Mem8 0 ENDON
+

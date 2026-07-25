@@ -1,0 +1,10 @@
+11:26:07.524 RSL: RESULT = {"Rule1":{"State":"ON","Once":"OFF","StopOnError":"OFF","Length":359,"Free":152,"Rules":"ON System#Boot DO  RuleTimer1 5  ENDON  ON System#Boot DO  RuleTimer3 5  ENDON  on Rules#Timer=1 DO  IF (%switch2%==0) RuleTimer2 30; Power1 1; Delay 3; Power2 0; RuleTimer1 60 ELSE RuleTimer1 60; Power2 1 ENDIF ENDON on Rules#Timer=2 DO Power1 0 ENDON  on Rules#Timer=3 DO IF (%switch2%==1) Power2 1 ELSE  ENDIF ENDON on Power1#state=1 do Ruletimer2 30 ENDON"}}
+
+Rule1
+ON System#Boot DO  RuleTimer1 5  ENDON 
+ON System#Boot DO  RuleTimer3 5  ENDON 
+on Rules#Timer=1 DO  IF (%switch2%==0) RuleTimer2 30; Power1 1; Delay 3; Power2 0; RuleTimer1 60 ELSE RuleTimer1 60; Power2 1 ENDIF ENDON 
+on Rules#Timer=2 DO Power1 0 ENDON  
+on Rules#Timer=3 DO IF (%switch2%==1) Power2 1 ELSE  ENDIF ENDON 
+on Power1#state=1 do Ruletimer2 30 ENDON
+

@@ -121,7 +121,7 @@ def sync_timer()
     tasmota.cmd("Mem4 " + str(data["T2"]))
    
     tasmota.cmd("Mem5 " + str(data["T3"]))
-  tasmota.set_timer(60000,sync_timer)
+  tasmota.set_timer(600000,sync_timer)
 end
 
 tasmota.set_timer(20000,sync_timer)
